@@ -30,6 +30,14 @@
 		87883BD32965385000188968 /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883BD22965385000188968 /* SurveyView.swift */; };
 		87883BD529653A3C00188968 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883BD429653A3C00188968 /* IntroView.swift */; };
 		87883BD829653DF700188968 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883BD729653DF700188968 /* CustomButtonStyle.swift */; };
+		87883BDB29655EB000188968 /* SurveyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883BDA29655EB000188968 /* SurveyModel.swift */; };
+		87883BDD29655FD000188968 /* SurveyQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883BDC29655FD000188968 /* SurveyQuestion.swift */; };
+		87883BE1296573FB00188968 /* MultipleChoiceQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883BE0296573FB00188968 /* MultipleChoiceQuestion.swift */; };
+		87883BE32965757700188968 /* BinaryQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883BE22965757700188968 /* BinaryQuestion.swift */; };
+		87883BE5296575DA00188968 /* ContactFormQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883BE4296575DA00188968 /* ContactFormQuestion.swift */; };
+		87883BE72965760A00188968 /* CommentsFormQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883BE62965760A00188968 /* CommentsFormQuestion.swift */; };
+		87883BE92965769900188968 /* InlineMultipleChoiceQuestionGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883BE82965769900188968 /* InlineMultipleChoiceQuestionGroup.swift */; };
+		87883BEB2965786700188968 /* SurveyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883BEA2965786700188968 /* SurveyItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +77,14 @@
 		87883BD22965385000188968 /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
 		87883BD429653A3C00188968 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		87883BD729653DF700188968 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
+		87883BDA29655EB000188968 /* SurveyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyModel.swift; sourceTree = "<group>"; };
+		87883BDC29655FD000188968 /* SurveyQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyQuestion.swift; sourceTree = "<group>"; };
+		87883BE0296573FB00188968 /* MultipleChoiceQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleChoiceQuestion.swift; sourceTree = "<group>"; };
+		87883BE22965757700188968 /* BinaryQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryQuestion.swift; sourceTree = "<group>"; };
+		87883BE4296575DA00188968 /* ContactFormQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormQuestion.swift; sourceTree = "<group>"; };
+		87883BE62965760A00188968 /* CommentsFormQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsFormQuestion.swift; sourceTree = "<group>"; };
+		87883BE82965769900188968 /* InlineMultipleChoiceQuestionGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineMultipleChoiceQuestionGroup.swift; sourceTree = "<group>"; };
+		87883BEA2965786700188968 /* SurveyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +143,7 @@
 		87883B882965315200188968 /* Survey Demo */ = {
 			isa = PBXGroup;
 			children = (
+				87883BD929655E9E00188968 /* Model */,
 				87883BD629653DE600188968 /* Custom */,
 				87883BD12965383700188968 /* Survey */,
 				87883BCE2965374100188968 /* ViewController */,
@@ -183,6 +200,21 @@
 				87883BD729653DF700188968 /* CustomButtonStyle.swift */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		87883BD929655E9E00188968 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				87883BDA29655EB000188968 /* SurveyModel.swift */,
+				87883BEA2965786700188968 /* SurveyItem.swift */,
+				87883BDC29655FD000188968 /* SurveyQuestion.swift */,
+				87883BE0296573FB00188968 /* MultipleChoiceQuestion.swift */,
+				87883BE22965757700188968 /* BinaryQuestion.swift */,
+				87883BE4296575DA00188968 /* ContactFormQuestion.swift */,
+				87883BE62965760A00188968 /* CommentsFormQuestion.swift */,
+				87883BE82965769900188968 /* InlineMultipleChoiceQuestionGroup.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,13 +363,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87883BE5296575DA00188968 /* ContactFormQuestion.swift in Sources */,
 				87883B8E2965315200188968 /* MainViewController.swift in Sources */,
 				87883B8A2965315200188968 /* AppDelegate.swift in Sources */,
 				87883BD02965375B00188968 /* SurveyViewController.swift in Sources */,
+				87883BDB29655EB000188968 /* SurveyModel.swift in Sources */,
+				87883BE92965769900188968 /* InlineMultipleChoiceQuestionGroup.swift in Sources */,
+				87883BDD29655FD000188968 /* SurveyQuestion.swift in Sources */,
+				87883BEB2965786700188968 /* SurveyItem.swift in Sources */,
 				87883BD32965385000188968 /* SurveyView.swift in Sources */,
+				87883BE32965757700188968 /* BinaryQuestion.swift in Sources */,
+				87883BE1296573FB00188968 /* MultipleChoiceQuestion.swift in Sources */,
 				87883B8C2965315200188968 /* SceneDelegate.swift in Sources */,
 				87883BD829653DF700188968 /* CustomButtonStyle.swift in Sources */,
 				87883BD529653A3C00188968 /* IntroView.swift in Sources */,
+				87883BE72965760A00188968 /* CommentsFormQuestion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
