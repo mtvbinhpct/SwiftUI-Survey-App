@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct IntroView: View {
+    @Binding var surveyState: SurveyState
+    
     var body: some View {
         ZStack {
             Rectangle()
@@ -51,12 +53,12 @@ struct IntroView: View {
     }
     
     func takeSurveyTapped() {
-        
+        surveyState = .taking
     }
 }
 
 struct IntroView_Previews: PreviewProvider {
     static var previews: some View {
-        IntroView()
+        IntroView(surveyState: .constant(.showIntroScreen))
     }
 }

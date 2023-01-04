@@ -44,6 +44,12 @@ extension SurveyQuestion {
         }
         return true
     }
+    
+    func setVisibleWhenSelected( _ response : MultipleChoiceResponse ) -> Self {
+        var new = self
+        new.visibilityLogic = VisibilityLogic(type: .choiceMustBeSelected, choiceId: response.uuid)
+        return new
+    }
 }
 
 class VisibilityLogic : Codable {
@@ -54,11 +60,11 @@ class VisibilityLogic : Codable {
     
     let type: LogicType
     
-    let choiceID : UUID
+    let choiceId : UUID
     
-    init(type: LogicType, choiceID: UUID) {
+    init(type: LogicType, choiceId: UUID) {
         self.type = type
-        self.choiceID = choiceID
+        self.choiceId = choiceId
     }
 }
 

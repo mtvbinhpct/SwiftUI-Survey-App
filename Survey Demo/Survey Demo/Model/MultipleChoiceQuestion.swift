@@ -12,7 +12,7 @@ class MultipleChoiceQuestion : ObservableObject, SurveyQuestion {
     let uuid: UUID
     var visibilityLogic: VisibilityLogic?
     var required: Bool = false
-    var allowMultipleSelection = false
+    var allowsMultipleSelection = false
     var tag: String
     var choices : [MultipleChoiceResponse]
     
@@ -20,7 +20,7 @@ class MultipleChoiceQuestion : ObservableObject, SurveyQuestion {
         self.title = title
         self.uuid = UUID()
         self.tag = tag
-        self.allowMultipleSelection = multiSelect
+        self.allowsMultipleSelection = multiSelect
         self.choices = answers.map({ MultipleChoiceResponse($0) })
         
     }
@@ -29,7 +29,7 @@ class MultipleChoiceQuestion : ObservableObject, SurveyQuestion {
         self.title = title
         self.uuid = UUID()
         self.tag = tag
-        self.allowMultipleSelection = multiSelect
+        self.allowsMultipleSelection = multiSelect
 
         self.choices = []
         for item in items {
@@ -46,11 +46,11 @@ class MultipleChoiceResponse: ObservableObject, Codable {
     let text: String
     let uuid: UUID
     var selected = false
-    let allowCustomTextEntry: Bool
-    init(_ text: String, allowCustomTextEntry: Bool = false) {
+    let allowsCustomTextEntry: Bool
+    init(_ text: String, allowsCustomTextEntry: Bool = false) {
         self.text = text
         self.uuid = UUID()
-        self.allowCustomTextEntry = allowCustomTextEntry
+        self.allowsCustomTextEntry = allowsCustomTextEntry
     }
     
 }

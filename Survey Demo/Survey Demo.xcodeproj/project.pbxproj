@@ -38,6 +38,14 @@
 		87883BE72965760A00188968 /* CommentsFormQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883BE62965760A00188968 /* CommentsFormQuestion.swift */; };
 		87883BE92965769900188968 /* InlineMultipleChoiceQuestionGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883BE82965769900188968 /* InlineMultipleChoiceQuestionGroup.swift */; };
 		87883BEB2965786700188968 /* SurveyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883BEA2965786700188968 /* SurveyItem.swift */; };
+		87883BF22965A9A900188968 /* KeyboardAware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883BEE2965A9A900188968 /* KeyboardAware.swift */; };
+		87883BF32965A9A900188968 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 87883BEF2965A9A900188968 /* LICENSE */; };
+		87883BF42965A9A900188968 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 87883BF02965A9A900188968 /* README.md */; };
+		87883BF52965A9A900188968 /* KeyboardInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883BF12965A9A900188968 /* KeyboardInfo.swift */; };
+		87883BF82965AA7D00188968 /* RemoteConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883BF72965AA7D00188968 /* RemoteConfigService.swift */; };
+		87883BFA2965AC1600188968 /* SurveyHelper+Filrebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883BF92965AC1600188968 /* SurveyHelper+Filrebase.swift */; };
+		87883BFC2965B3E600188968 /* SampleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883BFB2965B3E600188968 /* SampleObject.swift */; };
+		87883BFE2965BABF00188968 /* MultipleChoiceQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883BFD2965BABF00188968 /* MultipleChoiceQuestionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +93,14 @@
 		87883BE62965760A00188968 /* CommentsFormQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsFormQuestion.swift; sourceTree = "<group>"; };
 		87883BE82965769900188968 /* InlineMultipleChoiceQuestionGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineMultipleChoiceQuestionGroup.swift; sourceTree = "<group>"; };
 		87883BEA2965786700188968 /* SurveyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyItem.swift; sourceTree = "<group>"; };
+		87883BEE2965A9A900188968 /* KeyboardAware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardAware.swift; sourceTree = "<group>"; };
+		87883BEF2965A9A900188968 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		87883BF02965A9A900188968 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		87883BF12965A9A900188968 /* KeyboardInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardInfo.swift; sourceTree = "<group>"; };
+		87883BF72965AA7D00188968 /* RemoteConfigService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigService.swift; sourceTree = "<group>"; };
+		87883BF92965AC1600188968 /* SurveyHelper+Filrebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SurveyHelper+Filrebase.swift"; sourceTree = "<group>"; };
+		87883BFB2965B3E600188968 /* SampleObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleObject.swift; sourceTree = "<group>"; };
+		87883BFD2965BABF00188968 /* MultipleChoiceQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleChoiceQuestionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,9 +159,11 @@
 		87883B882965315200188968 /* Survey Demo */ = {
 			isa = PBXGroup;
 			children = (
+				87883BF62965A9D200188968 /* Service */,
+				87883BEC2965A98A00188968 /* ThirdParty */,
 				87883BD929655E9E00188968 /* Model */,
 				87883BD629653DE600188968 /* Custom */,
-				87883BD12965383700188968 /* Survey */,
+				87883BD12965383700188968 /* View */,
 				87883BCE2965374100188968 /* ViewController */,
 				87883B892965315200188968 /* AppDelegate.swift */,
 				87883B8B2965315200188968 /* SceneDelegate.swift */,
@@ -185,13 +203,14 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		87883BD12965383700188968 /* Survey */ = {
+		87883BD12965383700188968 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				87883BD22965385000188968 /* SurveyView.swift */,
 				87883BD429653A3C00188968 /* IntroView.swift */,
+				87883BFD2965BABF00188968 /* MultipleChoiceQuestionView.swift */,
 			);
-			path = Survey;
+			path = View;
 			sourceTree = "<group>";
 		};
 		87883BD629653DE600188968 /* Custom */ = {
@@ -213,8 +232,37 @@
 				87883BE4296575DA00188968 /* ContactFormQuestion.swift */,
 				87883BE62965760A00188968 /* CommentsFormQuestion.swift */,
 				87883BE82965769900188968 /* InlineMultipleChoiceQuestionGroup.swift */,
+				87883BFB2965B3E600188968 /* SampleObject.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		87883BEC2965A98A00188968 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				87883BED2965A9A900188968 /* KeyboardAware */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		87883BED2965A9A900188968 /* KeyboardAware */ = {
+			isa = PBXGroup;
+			children = (
+				87883BEE2965A9A900188968 /* KeyboardAware.swift */,
+				87883BEF2965A9A900188968 /* LICENSE */,
+				87883BF02965A9A900188968 /* README.md */,
+				87883BF12965A9A900188968 /* KeyboardInfo.swift */,
+			);
+			path = KeyboardAware;
+			sourceTree = "<group>";
+		};
+		87883BF62965A9D200188968 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				87883BF72965AA7D00188968 /* RemoteConfigService.swift */,
+				87883BF92965AC1600188968 /* SurveyHelper+Filrebase.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,8 +382,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87883BF32965A9A900188968 /* LICENSE in Resources */,
 				87883B962965315300188968 /* LaunchScreen.storyboard in Resources */,
 				87883BBB2965326000188968 /* GoogleService-Info.plist in Resources */,
+				87883BF42965A9A900188968 /* README.md in Resources */,
 				87883BBC2965326000188968 /* sample_survey.json in Resources */,
 				87883B932965315300188968 /* Assets.xcassets in Resources */,
 				87883B912965315200188968 /* Main.storyboard in Resources */,
@@ -372,12 +422,18 @@
 				87883BDD29655FD000188968 /* SurveyQuestion.swift in Sources */,
 				87883BEB2965786700188968 /* SurveyItem.swift in Sources */,
 				87883BD32965385000188968 /* SurveyView.swift in Sources */,
+				87883BF52965A9A900188968 /* KeyboardInfo.swift in Sources */,
 				87883BE32965757700188968 /* BinaryQuestion.swift in Sources */,
 				87883BE1296573FB00188968 /* MultipleChoiceQuestion.swift in Sources */,
 				87883B8C2965315200188968 /* SceneDelegate.swift in Sources */,
 				87883BD829653DF700188968 /* CustomButtonStyle.swift in Sources */,
+				87883BFE2965BABF00188968 /* MultipleChoiceQuestionView.swift in Sources */,
+				87883BFC2965B3E600188968 /* SampleObject.swift in Sources */,
+				87883BFA2965AC1600188968 /* SurveyHelper+Filrebase.swift in Sources */,
 				87883BD529653A3C00188968 /* IntroView.swift in Sources */,
+				87883BF82965AA7D00188968 /* RemoteConfigService.swift in Sources */,
 				87883BE72965760A00188968 /* CommentsFormQuestion.swift in Sources */,
+				87883BF22965A9A900188968 /* KeyboardAware.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,8 +608,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Survey Demo/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -567,8 +624,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.binhpct.swiftui-demo.Survey-Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.binhpct.swiftui-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -580,8 +638,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Survey Demo/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -595,8 +654,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.binhpct.swiftui-demo.Survey-Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.binhpct.swiftui-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class MainViewController: UIViewController {
 
@@ -16,11 +17,17 @@ class MainViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        showSurvey()
+        RemoteConfigService().loadSurvey { survey in
+            if let survey = survey {
+                DispatchQueue.main.async {
+                    self.showSurvey(survey)
+                }
+            }
+        }
     }
 
-    func showSurvey() {
-        let surveyView = SurveyView()
+    func showSurvey(_ survey: Survey) {
+        let surveyView = SurveyView(survey: survey)
         let surveyVC = SurveyViewController(rootView: surveyView)
         surveyVC.overrideUserInterfaceStyle = .light
         surveyVC.modalPresentationStyle = .fullScreen
