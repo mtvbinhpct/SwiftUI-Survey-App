@@ -1,0 +1,36 @@
+
+{
+  "version" : "001",
+  "questions" : [
+    {
+      "type" : 0,
+      "question" : {
+        "tag" : "what-using-for",
+        "allowsMultipleSelection" : true,
+        "title" : "What are you primarily using our app for?",
+        "required" : false,
+        "choices" : [
+          {
+            "uuid" : "D0E16757-CA82-4882-8C1B-5B773DFB33A5",
+            "selected" : false,
+            "allowsCustomTextEntry" : false,
+            "text" : "Work"
+          },
+          {
+            "uuid" : "6D05B7DD-95B8-4C49-97CD-665163DBA754",
+            "selected" : false,
+            "allowsCustomTextEntry" : false,
+            "text" : "Fun"
+          },
+          {
+            "uuid" : "54741F4B-A95F-4990-9B49-9AEBDA352096",
+            "selected" : false,
+            "allowsCustomTextEntry" : true,
+            "text" : "Other"
+          }
+        ],
+        "uuid" : "7F77E248-8429-463E-9291-241B94BEE4F8"
+      }
+    },
+  ]
+}

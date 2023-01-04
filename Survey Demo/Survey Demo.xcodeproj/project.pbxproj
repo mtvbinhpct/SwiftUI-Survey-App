@@ -9,13 +9,27 @@
 /* Begin PBXBuildFile section */
 		87883B8A2965315200188968 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883B892965315200188968 /* AppDelegate.swift */; };
 		87883B8C2965315200188968 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883B8B2965315200188968 /* SceneDelegate.swift */; };
-		87883B8E2965315200188968 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883B8D2965315200188968 /* ViewController.swift */; };
+		87883B8E2965315200188968 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883B8D2965315200188968 /* MainViewController.swift */; };
 		87883B912965315200188968 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87883B8F2965315200188968 /* Main.storyboard */; };
 		87883B932965315300188968 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87883B922965315300188968 /* Assets.xcassets */; };
 		87883B962965315300188968 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87883B942965315300188968 /* LaunchScreen.storyboard */; };
 		87883BA12965315300188968 /* Survey_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883BA02965315300188968 /* Survey_DemoTests.swift */; };
 		87883BAB2965315300188968 /* Survey_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883BAA2965315300188968 /* Survey_DemoUITests.swift */; };
 		87883BAD2965315300188968 /* Survey_DemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883BAC2965315300188968 /* Survey_DemoUITestsLaunchTests.swift */; };
+		87883BBB2965326000188968 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87883BB92965325F00188968 /* GoogleService-Info.plist */; };
+		87883BBC2965326000188968 /* sample_survey.json in Resources */ = {isa = PBXBuildFile; fileRef = 87883BBA2965326000188968 /* sample_survey.json */; };
+		87883BBF296536B000188968 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 87883BBE296536B000188968 /* FirebaseAuth */; };
+		87883BC1296536B000188968 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 87883BC0296536B000188968 /* FirebaseDatabase */; };
+		87883BC3296536B000188968 /* FirebaseDatabaseSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 87883BC2296536B000188968 /* FirebaseDatabaseSwift-Beta */; };
+		87883BC5296536B000188968 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 87883BC4296536B000188968 /* FirebaseFirestore */; };
+		87883BC7296536B000188968 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 87883BC6296536B000188968 /* FirebaseFirestoreSwift-Beta */; };
+		87883BC9296536B000188968 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 87883BC8296536B000188968 /* FirebaseRemoteConfig */; };
+		87883BCB296536B000188968 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 87883BCA296536B000188968 /* FirebaseStorage */; };
+		87883BCD296536B000188968 /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 87883BCC296536B000188968 /* FirebaseStorageSwift-Beta */; };
+		87883BD02965375B00188968 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883BCF2965375B00188968 /* SurveyViewController.swift */; };
+		87883BD32965385000188968 /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883BD22965385000188968 /* SurveyView.swift */; };
+		87883BD529653A3C00188968 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883BD429653A3C00188968 /* IntroView.swift */; };
+		87883BD829653DF700188968 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883BD729653DF700188968 /* CustomButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +53,7 @@
 		87883B862965315200188968 /* Survey Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Survey Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87883B892965315200188968 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87883B8B2965315200188968 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		87883B8D2965315200188968 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		87883B8D2965315200188968 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		87883B902965315200188968 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		87883B922965315300188968 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87883B952965315300188968 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +63,12 @@
 		87883BA62965315300188968 /* Survey DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Survey DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87883BAA2965315300188968 /* Survey_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey_DemoUITests.swift; sourceTree = "<group>"; };
 		87883BAC2965315300188968 /* Survey_DemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey_DemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		87883BB92965325F00188968 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		87883BBA2965326000188968 /* sample_survey.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample_survey.json; sourceTree = "<group>"; };
+		87883BCF2965375B00188968 /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
+		87883BD22965385000188968 /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
+		87883BD429653A3C00188968 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
+		87883BD729653DF700188968 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +76,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87883BC3296536B000188968 /* FirebaseDatabaseSwift-Beta in Frameworks */,
+				87883BC5296536B000188968 /* FirebaseFirestore in Frameworks */,
+				87883BC7296536B000188968 /* FirebaseFirestoreSwift-Beta in Frameworks */,
+				87883BC9296536B000188968 /* FirebaseRemoteConfig in Frameworks */,
+				87883BCB296536B000188968 /* FirebaseStorage in Frameworks */,
+				87883BCD296536B000188968 /* FirebaseStorageSwift-Beta in Frameworks */,
+				87883BC1296536B000188968 /* FirebaseDatabase in Frameworks */,
+				87883BBF296536B000188968 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,12 +127,16 @@
 		87883B882965315200188968 /* Survey Demo */ = {
 			isa = PBXGroup;
 			children = (
+				87883BD629653DE600188968 /* Custom */,
+				87883BD12965383700188968 /* Survey */,
+				87883BCE2965374100188968 /* ViewController */,
 				87883B892965315200188968 /* AppDelegate.swift */,
 				87883B8B2965315200188968 /* SceneDelegate.swift */,
-				87883B8D2965315200188968 /* ViewController.swift */,
 				87883B8F2965315200188968 /* Main.storyboard */,
 				87883B922965315300188968 /* Assets.xcassets */,
 				87883B942965315300188968 /* LaunchScreen.storyboard */,
+				87883BB92965325F00188968 /* GoogleService-Info.plist */,
+				87883BBA2965326000188968 /* sample_survey.json */,
 				87883B972965315300188968 /* Info.plist */,
 			);
 			path = "Survey Demo";
@@ -127,6 +159,32 @@
 			path = "Survey DemoUITests";
 			sourceTree = "<group>";
 		};
+		87883BCE2965374100188968 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				87883B8D2965315200188968 /* MainViewController.swift */,
+				87883BCF2965375B00188968 /* SurveyViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		87883BD12965383700188968 /* Survey */ = {
+			isa = PBXGroup;
+			children = (
+				87883BD22965385000188968 /* SurveyView.swift */,
+				87883BD429653A3C00188968 /* IntroView.swift */,
+			);
+			path = Survey;
+			sourceTree = "<group>";
+		};
+		87883BD629653DE600188968 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				87883BD729653DF700188968 /* CustomButtonStyle.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +201,16 @@
 			dependencies = (
 			);
 			name = "Survey Demo";
+			packageProductDependencies = (
+				87883BBE296536B000188968 /* FirebaseAuth */,
+				87883BC0296536B000188968 /* FirebaseDatabase */,
+				87883BC2296536B000188968 /* FirebaseDatabaseSwift-Beta */,
+				87883BC4296536B000188968 /* FirebaseFirestore */,
+				87883BC6296536B000188968 /* FirebaseFirestoreSwift-Beta */,
+				87883BC8296536B000188968 /* FirebaseRemoteConfig */,
+				87883BCA296536B000188968 /* FirebaseStorage */,
+				87883BCC296536B000188968 /* FirebaseStorageSwift-Beta */,
+			);
 			productName = "Survey Demo";
 			productReference = 87883B862965315200188968 /* Survey Demo.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +283,9 @@
 				Base,
 			);
 			mainGroup = 87883B7D2965315200188968;
+			packageReferences = (
+				87883BBD296536B000188968 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 87883B872965315200188968 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,6 +303,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				87883B962965315300188968 /* LaunchScreen.storyboard in Resources */,
+				87883BBB2965326000188968 /* GoogleService-Info.plist in Resources */,
+				87883BBC2965326000188968 /* sample_survey.json in Resources */,
 				87883B932965315300188968 /* Assets.xcassets in Resources */,
 				87883B912965315200188968 /* Main.storyboard in Resources */,
 			);
@@ -258,9 +331,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87883B8E2965315200188968 /* ViewController.swift in Sources */,
+				87883B8E2965315200188968 /* MainViewController.swift in Sources */,
 				87883B8A2965315200188968 /* AppDelegate.swift in Sources */,
+				87883BD02965375B00188968 /* SurveyViewController.swift in Sources */,
+				87883BD32965385000188968 /* SurveyView.swift in Sources */,
 				87883B8C2965315200188968 /* SceneDelegate.swift in Sources */,
+				87883BD829653DF700188968 /* CustomButtonStyle.swift in Sources */,
+				87883BD529653A3C00188968 /* IntroView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +521,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -471,6 +549,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -596,6 +675,60 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		87883BBD296536B000188968 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = exactVersion;
+				version = 8.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		87883BBE296536B000188968 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 87883BBD296536B000188968 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		87883BC0296536B000188968 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 87883BBD296536B000188968 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		87883BC2296536B000188968 /* FirebaseDatabaseSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 87883BBD296536B000188968 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseDatabaseSwift-Beta";
+		};
+		87883BC4296536B000188968 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 87883BBD296536B000188968 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		87883BC6296536B000188968 /* FirebaseFirestoreSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 87883BBD296536B000188968 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreSwift-Beta";
+		};
+		87883BC8296536B000188968 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 87883BBD296536B000188968 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		87883BCA296536B000188968 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 87883BBD296536B000188968 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		87883BCC296536B000188968 /* FirebaseStorageSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 87883BBD296536B000188968 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageSwift-Beta";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 87883B7E2965315200188968 /* Project object */;
 }
