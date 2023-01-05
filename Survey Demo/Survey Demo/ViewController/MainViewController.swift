@@ -17,7 +17,7 @@ class MainViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        RemoteConfigService().loadSurvey { survey in
+        SurveyService().fetchSurvey(fetchType: .fromFile) { survey in
             if let survey = survey {
                 DispatchQueue.main.async {
                     self.showSurvey(survey)

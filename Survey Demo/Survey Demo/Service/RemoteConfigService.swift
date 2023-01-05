@@ -8,13 +8,13 @@
 import Foundation
 import Firebase
 
-typealias fetchCompleteHandler = (Survey?) -> Void
+typealias FetchCompleteHandler = (Survey?) -> Void
 
 class RemoteConfigService {
     var remoteConfig: RemoteConfig!
-    var handler : fetchCompleteHandler?
+    var handler : FetchCompleteHandler?
     
-    func loadSurvey(handler: fetchCompleteHandler?) -> Void {
+    func loadSurvey(handler: FetchCompleteHandler?) -> Void {
         remoteConfig = RemoteConfig.remoteConfig()
         let settings = RemoteConfigSettings()
         settings.minimumFetchInterval = 0

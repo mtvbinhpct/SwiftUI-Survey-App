@@ -25,7 +25,7 @@ struct SurveyView: View {
     
     @ObservedObject var survey : Survey
     
-    @State var currentQuestion: Int = 5
+    @State var currentQuestion: Int = 0
     
     var delegate: SurveyViewDelegate?
     
@@ -49,7 +49,12 @@ struct SurveyView: View {
                                     BinaryChoiceQuestionView(question: question, onChoiceMade:{nextTapped()})
                                 } else if let question = survey.questions[currentQuestion] as? CommentsFormQuestion {
                                     CommentsFormQuestionView(question: question)
-                                    
+                                }
+                                else if let question = survey.questions[currentQuestion] as? ContactFormQuestion {
+                                    ContactFormQuestionView(question: question)
+                                }
+                                else if let group = survey.questions[currentQuestion] as? InlineMultipleChoiceQuestionGroup {
+                                    InlineMultipleChoiceQuestionGroupView(group: group)
                                 }
                             }
                             .background(Color.white)

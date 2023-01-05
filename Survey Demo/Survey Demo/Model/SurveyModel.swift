@@ -73,3 +73,11 @@ final class Survey : ObservableObject, Codable {
         return nil
     }
 }
+
+extension Survey {
+    static func loadFromFile(url: URL) throws -> Survey {
+        let jsonData = try Data(contentsOf: url)
+        let survey = try JSONDecoder().decode(Survey.self, from: jsonData)
+        return survey
+    }
+}
