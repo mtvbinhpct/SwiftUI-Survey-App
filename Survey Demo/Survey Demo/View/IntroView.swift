@@ -22,7 +22,6 @@ struct IntroView: View {
             VStack {
                 HStack {
                     Text("👋").font(.system(size: 80))
-                    Text("😀").font(.system(size: 100))
                 }.padding(EdgeInsets(top: 50, leading: 0, bottom: 20, trailing: 0))
                 Text("Raise your hand up!")
                     .font(.system(size: 45))

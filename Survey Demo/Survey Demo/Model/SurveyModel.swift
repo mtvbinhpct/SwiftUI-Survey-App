@@ -80,4 +80,16 @@ extension Survey {
         let survey = try JSONDecoder().decode(Survey.self, from: jsonData)
         return survey
     }
+    
+    static func getJsonDataForSurvey(survey: Survey) -> Data? {
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+        do {
+            let jsonData = try encoder.encode(survey)
+            return jsonData
+        } catch {
+            print(error)
+        }
+        return nil
+    }
 }

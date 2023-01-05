@@ -37,3 +37,12 @@ func TitleToTag( _ tag : String ) -> String {
         .joined(separator: "-")
     
 }
+
+extension Bundle {
+    var releaseVersionNumber: String {
+        return (infoDictionary?["CFBundleShortVersionString"] as? String) ?? ""
+    }
+    var buildVersionNumber: String {
+        return (infoDictionary?["CFBundleVersion"] as? String) ?? ""
+    }
+}

@@ -12,6 +12,7 @@ enum SurveyState {
     case showIntroScreen
     case taking
     case complete
+    case submitComplete
 }
 
 protocol SurveyViewDelegate: AnyObject {
@@ -19,7 +20,7 @@ protocol SurveyViewDelegate: AnyObject {
 }
 
 struct SurveyView: View {
-    @State var surveyState : SurveyState = .taking
+    @State var surveyState : SurveyState = .showIntroScreen
     
     @State var processing = false
     
@@ -32,8 +33,13 @@ struct SurveyView: View {
     var body: some View {
         if surveyState == .showIntroScreen {
             IntroView(surveyState: $surveyState)
-        }
-        else if surveyState == .taking {
+        } else if surveyState == .complete || surveyState == .submitComplete {
+            CompleteView(state: $surveyState , submitSurveyTap: {
+                submitSurveyTapped()
+            }, restartSurveyTap: {
+                restartSurvey()
+            })
+        } else if surveyState == .taking {
             VStack(spacing:0) {
                 Text("Question ".appendingFormat("%i / %i", currentQuestion+1, self.survey.questions.count))
                     .bold().padding(EdgeInsets(top: 5, leading: 0, bottom: 2, trailing: 0))
@@ -121,11 +127,27 @@ struct SurveyView: View {
         surveyState = .complete
     }
     
+    func submitSurveyTapped() {
+//        self.processing = true
+        var meta : [String : String] = [:]
+        meta["app_version"] = Bundle.main.releaseVersionNumber
+        meta["build"] = Bundle.main.buildVersionNumber
+        survey.metadata = meta
+//        surveyState = .submitComplete
+//        self.delegate?.surveyCompleted(with: self.survey)
+//        self.processing = false
+        SurveyService().saveResponseToServer(survey: survey) { success in
+            DispatchQueue.main.async {
+                surveyState = .submitComplete
+            }
+        }
+    }
+    
     func restartSurvey() {
         currentQuestion = 0
         surveyState = .taking
     }
-    
+                         
     init(survey: Survey, delegate: SurveyViewDelegate? = nil) {
         self.survey = survey
         self.delegate = delegate
