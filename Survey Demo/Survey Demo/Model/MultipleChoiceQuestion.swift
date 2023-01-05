@@ -47,10 +47,13 @@ class MultipleChoiceResponse: ObservableObject, Codable {
     let uuid: UUID
     var selected = false
     let allowsCustomTextEntry: Bool
-    init(_ text: String, allowsCustomTextEntry: Bool = false) {
+    var customTextEntry: String? = nil
+    
+    init(_ text: String, allowsCustomTextEntry: Bool = false, selected: Bool = false) {
         self.text = text
         self.uuid = UUID()
         self.allowsCustomTextEntry = allowsCustomTextEntry
+        self.selected = selected
     }
     
 }
