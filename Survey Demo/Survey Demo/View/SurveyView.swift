@@ -25,7 +25,7 @@ struct SurveyView: View {
     
     @ObservedObject var survey : Survey
     
-    @State var currentQuestion: Int = 0
+    @State var currentQuestion: Int = 5
     
     var delegate: SurveyViewDelegate?
     
@@ -45,6 +45,11 @@ struct SurveyView: View {
                             ScrollView {
                                 if let question = survey.questions[currentQuestion] as? MultipleChoiceQuestion {
                                     MultipleChoiceQuestionView(question: question, scrollProxy: proxy)
+                                } else if let question = survey.questions[currentQuestion] as? BinaryQuestion {
+                                    BinaryChoiceQuestionView(question: question, onChoiceMade:{nextTapped()})
+                                } else if let question = survey.questions[currentQuestion] as? CommentsFormQuestion {
+                                    CommentsFormQuestionView(question: question)
+                                    
                                 }
                             }
                             .background(Color.white)
@@ -73,9 +78,9 @@ struct SurveyView: View {
         }
     }
     
-//    private func closeKeyboard() {
-//        UIApplication.shared.endEditing()
-//    }
+    private func closeKeyboard() {
+        UIApplication.shared.endEditing()
+    }
     
     func previousTapped() {
         var i = currentQuestion
@@ -125,5 +130,11 @@ struct SurveyView: View {
 struct SurveyView_Previews: PreviewProvider {
     static var previews: some View {
         SurveyView(survey: SampleSurvey).preferredColorScheme(.light)
+    }
+}
+
+extension UIApplication {
+    func endEditing() {
+        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }

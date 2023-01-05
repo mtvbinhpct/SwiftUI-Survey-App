@@ -96,3 +96,66 @@ extension Shape {
             .background(self.fill(fillStyle))
     }
 }
+
+
+struct TextEditorWithDone: UIViewRepresentable {
+    
+    @Binding var text: String
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(text: $text)
+    }
+    
+    func makeUIView(context: Context) -> UITextView {
+        
+        let textfield = UITextView()
+        textfield.font = UIFont.systemFont(ofSize: UIFont.systemFontSize + 2)
+        
+        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: textfield.frame.size.width, height: 44))
+        let doneButton = UIBarButtonItem(title: "Dismiss", style: .done, target: self, action: #selector(textfield.doneButtonTapped(button:)))
+        
+        let spacer = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+
+        toolBar.items = [spacer, doneButton]
+        
+        textfield.inputAccessoryView = toolBar
+        textfield.delegate = context.coordinator
+        return textfield
+        
+    }
+    
+    func updateUIView(_ uiView: UITextView, context: Context) {
+        uiView.text = text
+        
+    }
+    
+}
+
+extension  UITextView{
+    @objc func doneButtonTapped(button:UIBarButtonItem) -> Void {
+       self.resignFirstResponder()
+    }
+
+}
+
+extension TextEditorWithDone {
+    class Coordinator: NSObject, UITextViewDelegate {
+        @Binding var text: String
+
+        init(text: Binding<String>) {
+            _text = text
+        }
+
+        func textViewDidChangeSelection(_ textView: UITextView) {
+            DispatchQueue.main.async {
+                self.text = textView.text ?? ""
+            }
+        }
+    }
+}
+
+struct TextEditorWithDone_Previews: PreviewProvider {
+    static var previews: some View {
+        TextEditorWithDone(text: .constant("placeholder"))
+    }
+}

@@ -36,3 +36,34 @@ struct CustomButtonStyle_Previews: PreviewProvider {
 
     }
 }
+
+struct YesNoButtonStyle: ButtonStyle {
+    let bgColor : Color
+    init(bgColor: Color = Color.gray) {
+        self.bgColor = bgColor
+    }
+    func makeBody(configuration: Self.Configuration) -> some View {
+        return configuration.label
+            .padding(EdgeInsets(top: 20, leading: 40, bottom: 20, trailing: 40))
+            .background(bgColor)
+            .cornerRadius(26.0)
+            .foregroundColor(Color.white)
+            .opacity(configuration.isPressed ? 0.7 : 1)
+            .scaleEffect(configuration.isPressed ? 0.8 : 1)
+            .animation(.easeInOut(duration: 0.2))
+            
+    }
+}
+
+struct YesNoButtonStyle_Previews: PreviewProvider {
+    static var previews: some View {
+        Button {
+            
+        } label: {
+            Text("Sample Button")
+                .bold()
+        }
+        .buttonStyle(YesNoButtonStyle(bgColor: .blue))
+
+    }
+}

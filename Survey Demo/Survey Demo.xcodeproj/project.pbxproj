@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		874E99E6296681E60094E676 /* MultipleChoiceResponseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874E99E5296681E60094E676 /* MultipleChoiceResponseView.swift */; };
 		874E99E82966895D0094E676 /* TextFieldWithDone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874E99E72966895D0094E676 /* TextFieldWithDone.swift */; };
+		874E99ED2966D2E00094E676 /* BinaryChoiceQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874E99EC2966D2E00094E676 /* BinaryChoiceQuestionView.swift */; };
+		874E99EF2966D8FA0094E676 /* Keyboard Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874E99EE2966D8FA0094E676 /* Keyboard Helper.swift */; };
+		874E99F12966D9830094E676 /* CommentFormQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874E99F02966D9830094E676 /* CommentFormQuestionView.swift */; };
 		87883B8A2965315200188968 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883B892965315200188968 /* AppDelegate.swift */; };
 		87883B8C2965315200188968 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883B8B2965315200188968 /* SceneDelegate.swift */; };
 		87883B8E2965315200188968 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883B8D2965315200188968 /* MainViewController.swift */; };
@@ -70,6 +73,9 @@
 /* Begin PBXFileReference section */
 		874E99E5296681E60094E676 /* MultipleChoiceResponseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleChoiceResponseView.swift; sourceTree = "<group>"; };
 		874E99E72966895D0094E676 /* TextFieldWithDone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithDone.swift; sourceTree = "<group>"; };
+		874E99EC2966D2E00094E676 /* BinaryChoiceQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryChoiceQuestionView.swift; sourceTree = "<group>"; };
+		874E99EE2966D8FA0094E676 /* Keyboard Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyboard Helper.swift"; sourceTree = "<group>"; };
+		874E99F02966D9830094E676 /* CommentFormQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentFormQuestionView.swift; sourceTree = "<group>"; };
 		87883B862965315200188968 /* Survey Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Survey Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87883B892965315200188968 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87883B8B2965315200188968 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +146,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		874E99EB2966D2C00094E676 /* Question + Response */ = {
+			isa = PBXGroup;
+			children = (
+				87883BFD2965BABF00188968 /* MultipleChoiceQuestionView.swift */,
+				874E99E5296681E60094E676 /* MultipleChoiceResponseView.swift */,
+				874E99EC2966D2E00094E676 /* BinaryChoiceQuestionView.swift */,
+				874E99F02966D9830094E676 /* CommentFormQuestionView.swift */,
+			);
+			path = "Question + Response";
+			sourceTree = "<group>";
+		};
 		87883B7D2965315200188968 = {
 			isa = PBXGroup;
 			children = (
@@ -210,10 +227,9 @@
 		87883BD12965383700188968 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				874E99EB2966D2C00094E676 /* Question + Response */,
 				87883BD22965385000188968 /* SurveyView.swift */,
 				87883BD429653A3C00188968 /* IntroView.swift */,
-				87883BFD2965BABF00188968 /* MultipleChoiceQuestionView.swift */,
-				874E99E5296681E60094E676 /* MultipleChoiceResponseView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -223,6 +239,7 @@
 			children = (
 				87883BD729653DF700188968 /* CustomButtonStyle.swift */,
 				874E99E72966895D0094E676 /* TextFieldWithDone.swift */,
+				874E99EE2966D8FA0094E676 /* Keyboard Helper.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -424,6 +441,8 @@
 				87883B8A2965315200188968 /* AppDelegate.swift in Sources */,
 				87883BD02965375B00188968 /* SurveyViewController.swift in Sources */,
 				87883BDB29655EB000188968 /* SurveyModel.swift in Sources */,
+				874E99EF2966D8FA0094E676 /* Keyboard Helper.swift in Sources */,
+				874E99F12966D9830094E676 /* CommentFormQuestionView.swift in Sources */,
 				87883BE92965769900188968 /* InlineMultipleChoiceQuestionGroup.swift in Sources */,
 				87883BDD29655FD000188968 /* SurveyQuestion.swift in Sources */,
 				87883BEB2965786700188968 /* SurveyItem.swift in Sources */,
@@ -439,6 +458,7 @@
 				87883BFA2965AC1600188968 /* SurveyHelper+Filrebase.swift in Sources */,
 				87883BD529653A3C00188968 /* IntroView.swift in Sources */,
 				87883BF82965AA7D00188968 /* RemoteConfigService.swift in Sources */,
+				874E99ED2966D2E00094E676 /* BinaryChoiceQuestionView.swift in Sources */,
 				87883BE72965760A00188968 /* CommentsFormQuestion.swift in Sources */,
 				874E99E6296681E60094E676 /* MultipleChoiceResponseView.swift in Sources */,
 				87883BF22965A9A900188968 /* KeyboardAware.swift in Sources */,
