@@ -11,6 +11,7 @@ struct CompleteView: View {
     @Binding var state: SurveyState
     var submitSurveyTap : (() -> Void)?
     var restartSurveyTap : (() -> Void)?
+    @State var isAnimateComplte = false
     
     var body: some View {
         VStack {
@@ -29,7 +30,7 @@ struct CompleteView: View {
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundColor(.green)
-                    .animation(.easeInOut(duration: 1))
+                    .animation(.easeInOut(duration: 1) )
             }
 
             Button(action: { restartSurveyTap?() }, label: {
@@ -44,3 +45,4 @@ struct CompleteView_Previews: PreviewProvider {
         CompleteView(state: .constant(.submitComplete))
     }
 }
+

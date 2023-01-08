@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class SurveyViewController<ContentView> : UIHostingController<ContentView> where ContentView : View {
+class HostingViewController<ContentView> : UIHostingController<ContentView> where ContentView : View {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -23,5 +23,11 @@ class SurveyViewController<ContentView> : UIHostingController<ContentView> where
     
     override var shouldAutorotate: Bool {
         return true
+    }
+    
+    func dismiss(complete:@escaping ()->Void) {
+        dismiss(animated: true) {
+            complete()
+        }
     }
 }

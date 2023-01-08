@@ -16,6 +16,7 @@
 		874E99F5296705160094E676 /* ContactFormQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874E99F4296705160094E676 /* ContactFormQuestionView.swift */; };
 		874E99F7296707EA0094E676 /* InlineMultipleChoiceQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874E99F6296707EA0094E676 /* InlineMultipleChoiceQuestionView.swift */; };
 		874E99F9296711770094E676 /* CompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874E99F8296711770094E676 /* CompleteView.swift */; };
+		874F38A0296ABD9B00266151 /* ChooseSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874F389F296ABD9B00266151 /* ChooseSourceView.swift */; };
 		87883B8A2965315200188968 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883B892965315200188968 /* AppDelegate.swift */; };
 		87883B8C2965315200188968 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883B8B2965315200188968 /* SceneDelegate.swift */; };
 		87883B8E2965315200188968 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883B8D2965315200188968 /* MainViewController.swift */; };
@@ -35,7 +36,7 @@
 		87883BC9296536B000188968 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 87883BC8296536B000188968 /* FirebaseRemoteConfig */; };
 		87883BCB296536B000188968 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 87883BCA296536B000188968 /* FirebaseStorage */; };
 		87883BCD296536B000188968 /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 87883BCC296536B000188968 /* FirebaseStorageSwift-Beta */; };
-		87883BD02965375B00188968 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883BCF2965375B00188968 /* SurveyViewController.swift */; };
+		87883BD02965375B00188968 /* HostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883BCF2965375B00188968 /* HostingViewController.swift */; };
 		87883BD32965385000188968 /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883BD22965385000188968 /* SurveyView.swift */; };
 		87883BD529653A3C00188968 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883BD429653A3C00188968 /* IntroView.swift */; };
 		87883BD829653DF700188968 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87883BD729653DF700188968 /* CustomButtonStyle.swift */; };
@@ -84,6 +85,7 @@
 		874E99F4296705160094E676 /* ContactFormQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormQuestionView.swift; sourceTree = "<group>"; };
 		874E99F6296707EA0094E676 /* InlineMultipleChoiceQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineMultipleChoiceQuestionView.swift; sourceTree = "<group>"; };
 		874E99F8296711770094E676 /* CompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteView.swift; sourceTree = "<group>"; };
+		874F389F296ABD9B00266151 /* ChooseSourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseSourceView.swift; sourceTree = "<group>"; };
 		87883B862965315200188968 /* Survey Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Survey Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87883B892965315200188968 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87883B8B2965315200188968 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,7 +101,7 @@
 		87883BAC2965315300188968 /* Survey_DemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey_DemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		87883BB92965325F00188968 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		87883BBA2965326000188968 /* sample_survey.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample_survey.json; sourceTree = "<group>"; };
-		87883BCF2965375B00188968 /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
+		87883BCF2965375B00188968 /* HostingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingViewController.swift; sourceTree = "<group>"; };
 		87883BD22965385000188968 /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
 		87883BD429653A3C00188968 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		87883BD729653DF700188968 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
@@ -229,7 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				87883B8D2965315200188968 /* MainViewController.swift */,
-				87883BCF2965375B00188968 /* SurveyViewController.swift */,
+				87883BCF2965375B00188968 /* HostingViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -241,6 +243,7 @@
 				87883BD22965385000188968 /* SurveyView.swift */,
 				87883BD429653A3C00188968 /* IntroView.swift */,
 				874E99F8296711770094E676 /* CompleteView.swift */,
+				874F389F296ABD9B00266151 /* ChooseSourceView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -452,7 +455,7 @@
 				87883B8E2965315200188968 /* MainViewController.swift in Sources */,
 				874E99F7296707EA0094E676 /* InlineMultipleChoiceQuestionView.swift in Sources */,
 				87883B8A2965315200188968 /* AppDelegate.swift in Sources */,
-				87883BD02965375B00188968 /* SurveyViewController.swift in Sources */,
+				87883BD02965375B00188968 /* HostingViewController.swift in Sources */,
 				874E99F5296705160094E676 /* ContactFormQuestionView.swift in Sources */,
 				87883BDB29655EB000188968 /* SurveyModel.swift in Sources */,
 				874E99EF2966D8FA0094E676 /* Keyboard Helper.swift in Sources */,
@@ -460,6 +463,7 @@
 				87883BE92965769900188968 /* InlineMultipleChoiceQuestionGroup.swift in Sources */,
 				87883BDD29655FD000188968 /* SurveyQuestion.swift in Sources */,
 				87883BEB2965786700188968 /* SurveyItem.swift in Sources */,
+				874F38A0296ABD9B00266151 /* ChooseSourceView.swift in Sources */,
 				87883BD32965385000188968 /* SurveyView.swift in Sources */,
 				87883BF52965A9A900188968 /* KeyboardInfo.swift in Sources */,
 				87883BE32965757700188968 /* BinaryQuestion.swift in Sources */,

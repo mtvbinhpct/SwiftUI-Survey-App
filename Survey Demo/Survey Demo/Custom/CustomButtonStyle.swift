@@ -17,8 +17,8 @@ struct CustomButtonStyle: ButtonStyle {
             .background(bgColor)
             .foregroundColor(.white)
             .cornerRadius(20.0)
-            .opacity(configuration.isPressed ? 0.1 : 1)
-            .scaleEffect(configuration.isPressed ? 1.8 : 1)
+            .opacity(configuration.isPressed ? 0.5 : 1)
+            .scaleEffect(configuration.isPressed ? 1.3 : 1)
             .animation(.easeInOut(duration: 0.2))
         
     }

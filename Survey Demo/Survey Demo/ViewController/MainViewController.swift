@@ -6,10 +6,9 @@
 //
 
 import UIKit
-import Firebase
 
 class MainViewController: UIViewController {
-
+    var chooseVC: HostingViewController<ChooseSourceView>?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -17,21 +16,31 @@ class MainViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        SurveyService().fetchSurvey(fetchType: .fromFile) { survey in
-            if let survey = survey {
-                DispatchQueue.main.async {
-                    self.showSurvey(survey)
+        if chooseVC == nil {
+            let chooseView = ChooseSourceView(completHandler: { survey in
+                if let survey = survey {
+                    DispatchQueue.main.async {
+                        self.showSurvey(survey)
+                    }
                 }
-            }
+            })
+            chooseVC = HostingViewController(rootView:chooseView)
+            chooseVC!.overrideUserInterfaceStyle = .light
+            chooseVC!.modalPresentationStyle = .fullScreen
+            self.present(chooseVC!, animated: false)
         }
+        
     }
 
     func showSurvey(_ survey: Survey) {
-        let surveyView = SurveyView(survey: survey)
-        let surveyVC = SurveyViewController(rootView: surveyView)
-        surveyVC.overrideUserInterfaceStyle = .light
-        surveyVC.modalPresentationStyle = .fullScreen
-        self.present(surveyVC, animated: false)
+        chooseVC?.dismiss {
+            let surveyView = SurveyView(survey: survey)
+            let surveyVC = HostingViewController(rootView: surveyView)
+            surveyVC.overrideUserInterfaceStyle = .light
+            surveyVC.modalPresentationStyle = .fullScreen
+            self.present(surveyVC, animated: true)
+        }
+        
     }
 
 }
