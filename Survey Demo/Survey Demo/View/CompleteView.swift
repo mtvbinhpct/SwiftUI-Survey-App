@@ -12,6 +12,7 @@ struct CompleteView: View {
     @Binding var state: SurveyState
     var submitSurveyTap : (() -> Void)?
     var restartSurveyTap : (() -> Void)?
+    @State var scale = 0.5
     
     var body: some View {
         VStack {
@@ -31,6 +32,15 @@ struct CompleteView: View {
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundColor(.green)
+                    .scaleEffect(scale)
+                    .onAppear {
+                        let baseAnimation = Animation.easeInOut(duration: 1)
+                        let repeated = baseAnimation.repeatCount(3, autoreverses: true)
+                        
+                        withAnimation(repeated) {
+                            scale = 1.0
+                        }
+                    }
             } else if state == .submitting{
                 ProgressView()
             }
