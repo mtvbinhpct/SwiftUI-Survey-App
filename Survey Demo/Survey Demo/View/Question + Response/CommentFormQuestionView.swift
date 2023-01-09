@@ -11,8 +11,6 @@ struct CommentsFormQuestionView : View {
     
     @ObservedObject var question : CommentsFormQuestion
     
-    
-    
     var body : some View {
         VStack {
             Text(question.title).font(.title).fontWeight(.bold).padding(EdgeInsets(top: 12, leading: 28, bottom: 2, trailing: 28))
@@ -33,7 +31,6 @@ struct CommentsFormQuestionView : View {
                     .disableAutocorrection(true)
                     .textContentType(.emailAddress)
                     
-                    
             }.padding()
             VStack(alignment: .leading) {
                 Text("Comments")
@@ -49,6 +46,15 @@ struct CommentsFormQuestionView : View {
             }.padding()
         }
     }
+
+    func isValidEmailAddress(emailAddressString: String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+
+        let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailPredicate.evaluate(with: emailAddressString)
+    }
+
+    
 }
 
 

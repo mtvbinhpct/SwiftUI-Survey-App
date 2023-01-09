@@ -9,6 +9,7 @@ import SwiftUI
 
 struct IntroView: View {
     @Binding var surveyState: SurveyState
+    @State private var animation = false
     
     var body: some View {
         ZStack {
@@ -46,13 +47,18 @@ struct IntroView: View {
                 }
                 .padding(50)
             }
-            
-                
-        }.padding(20)
+        }
+        .padding(20)
+        .opacity(animation ? 0 : 1.0)
+        .animation(.easeOut(duration: 1.0))
     }
     
     func takeSurveyTapped() {
-        surveyState = .taking
+        animation = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
+            self.surveyState = .taking
+        })
+        
     }
 }
 

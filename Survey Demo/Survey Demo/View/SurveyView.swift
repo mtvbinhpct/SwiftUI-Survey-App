@@ -12,6 +12,7 @@ enum SurveyState {
     case showIntroScreen
     case taking
     case complete
+    case submitting
     case submitComplete
 }
 
@@ -30,10 +31,12 @@ struct SurveyView: View {
     
     var delegate: SurveyViewDelegate?
     
+    @ObservedObject private var keyboard = KeyboardResponder()
+    
     var body: some View {
         if surveyState == .showIntroScreen {
             IntroView(surveyState: $surveyState)
-        } else if surveyState == .complete || surveyState == .submitComplete {
+        } else if surveyState == .complete || surveyState == .submitComplete || surveyState == .submitting {
             CompleteView(state: $surveyState , submitSurveyTap: {
                 submitSurveyTapped()
             }, restartSurveyTap: {
@@ -64,6 +67,7 @@ struct SurveyView: View {
                                 }
                             }
                             .background(Color.white)
+                            .keyboardAware()
                             .overlay(Rectangle().frame(width: nil, height: 1, alignment: .top).foregroundColor(Color(.systemGray4)), alignment: .top)
                         }
                     }
@@ -84,8 +88,9 @@ struct SurveyView: View {
                 .padding(EdgeInsets(top: 12, leading: 22, bottom: 18, trailing: 22))
                 .background(Color(.systemGray6))
                 .edgesIgnoringSafeArea([.leading, .trailing])
-            }.background(Color.white)
-            
+            }
+            .background(Color.white)
+            .edgesIgnoringSafeArea( .bottom )
         }
     }
     
@@ -138,7 +143,7 @@ struct SurveyView: View {
 //        self.processing = false
         SurveyService().saveResponseToServer(survey: survey) { success in
             DispatchQueue.main.async {
-                surveyState = .submitComplete
+                self.surveyState = .submitComplete
             }
         }
     }

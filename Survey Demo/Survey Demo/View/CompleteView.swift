@@ -8,36 +8,41 @@
 import SwiftUI
 
 struct CompleteView: View {
+
     @Binding var state: SurveyState
     var submitSurveyTap : (() -> Void)?
     var restartSurveyTap : (() -> Void)?
-    @State var isAnimateComplte = false
     
     var body: some View {
         VStack {
-            
             Text("👍").font(.system(size: 120)).padding(EdgeInsets(top: 60, leading: 0, bottom: 20, trailing: 0))
-            
             Text("Thanks!").font(.system(size: 45)).multilineTextAlignment(.center)
           
             Text("We really appreciate your feedback!").font(.title).padding(30).multilineTextAlignment(.center)
             if state == .complete {
-                Button(action: { submitSurveyTap?() }, label: {
+                Button(action: {
+                    state = .submitting
+                    submitSurveyTap?()
+                }, label: {
                     Text("Submit Survey").bold()
                 }).buttonStyle(CustomButtonStyle(bgColor: Color.blue)).padding()
-            } else {
+            } else if state == .submitComplete {
                 Text("You're all done!")
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundColor(.green)
-                    .animation(.easeInOut(duration: 1) )
+            } else if state == .submitting{
+                ProgressView()
             }
 
-            Button(action: { restartSurveyTap?() }, label: {
+            Button(action: {
+                restartSurveyTap?()
+            }, label: {
                 Text("Retake Survey")
             }).padding()
         }
     }
+
 }
 
 struct CompleteView_Previews: PreviewProvider {
