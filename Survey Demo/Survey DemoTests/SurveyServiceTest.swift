@@ -49,4 +49,17 @@ class SurveyServiceTests: XCTestCase {
         }
         waitForExpectations(timeout: 1.0)
     }
+    
+    func testSaveResponseToServer_Fail() {
+        let databaseService = DatabaseReferenceServiceMock()
+        databaseService.isComplete = false
+        let service = SurveyService(databaseService: databaseService)
+        let exp = self.expectation(description: "wait fetch survey")
+        let survey = Survey([], version: "1")
+        service.saveResponseToServer(survey: survey) { success in
+            XCTAssertFalse(success)
+            exp.fulfill()
+        }
+        waitForExpectations(timeout: 1.0)
+    }
 }
