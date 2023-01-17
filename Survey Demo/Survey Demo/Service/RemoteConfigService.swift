@@ -8,9 +8,14 @@
 import Foundation
 import Firebase
 
+protocol RemoteConfigServiceProtocol {
+    func loadSurvey(handler: FetchCompleteHandler?) -> Void
+    func fetchRemoteConfig()
+}
+
 typealias FetchCompleteHandler = (Survey?) -> Void
 
-class RemoteConfigService {
+class RemoteConfigService : RemoteConfigServiceProtocol {
     var remoteConfig: RemoteConfig!
     var handler : FetchCompleteHandler?
     

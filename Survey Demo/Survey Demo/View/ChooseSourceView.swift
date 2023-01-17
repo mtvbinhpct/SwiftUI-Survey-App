@@ -14,7 +14,7 @@ struct ChooseSourceView: View {
             Text("Where json file do you want to load from?")
                 .font(.title)
                 .padding()
-            HStack(spacing: 50) {
+            VStack(spacing: 10) {
                 Button(action: { loadFromFile() }) {
                     Text("Local file")
                         .fontWeight(.semibold)
